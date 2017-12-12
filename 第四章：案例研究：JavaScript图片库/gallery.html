@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles/layout.css" media="screen" />
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <!--点击链接时，不仅showPic函数被调用，链接被点击的默认行为也会被调用。这意味着用户还是会被带到图片查看窗口-->
+            <!--我们把onclick事件的返回值设置为false，这样onclick时间处理函数就会认为这个链接没有被点击-->
+            <a href="images/fireworks.jpg" title="A fireworks display" onclick="showPic(this);return false;">fireworks</a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" title="A cup of black coffee" onclick="showPic(this);return false;">Coffee</a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" title="A red, red rose" onclick="showPic(this);return false;">Rose</a>
+        </li>
+        <li>
+            <a href="images/bigben.jpg" title="The famous clock" onclick="showPic(this);return false;">Big Ben</a>
+        </li>
+    </ul>
+    <image id="placeholder" src="images/placeholder.jpg" alt="my image gallery" width="400px" length="400px" />
+    <p id="description">Choose an image</p>
+    <script src="script/showPic.js"></script>
+</body>
+
+</html>
